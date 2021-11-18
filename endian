@@ -1,0 +1,12 @@
+#include<stdio.h>
+union demo
+{
+    int a;
+    char b;
+};
+void main()
+{
+     union demo d1;
+    d1.a=0x0000001;
+    printf("%d",d1.b);
+}
