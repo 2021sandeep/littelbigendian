@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct alpha
+{
+    char string[20];
+};
+void main()
+{
+    struct alpha *s1=(struct alpha*)malloc(sizeof(struct alpha));
+    printf("enter a string:");
+    scanf("%s",s1->string);
+    
+    int n=strlen(s1->string);
+     int i,j;
+     char temp;
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(s1->string[i]>s1->string[j])
+            {
+                temp=s1->string[i];
+                s1->string[i]=s1->string[j];
+                s1->string[j]=temp;
+            }
+        }
+    }
+    printf("%s",s1->string);
+}
