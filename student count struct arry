@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+int count;
+int student_count()
+{
+    count ++;
+    
+}
+struct student
+{
+    char name[20];
+    char branch[20];
+    float cpg;
+};
+int main()
+{
+    struct student s[2];
+    int i;
+    for(i=0;i<2;i++)
+    {
+        printf("enter name :");
+        scanf("%s",s[i].name);
+        printf("enter branch:");
+        scanf("%s",s[i].branch);
+        printf("enter cpg:");
+        scanf("%f",&s[i].cpg);
+       student_count();
+   
+    }
+    for(i=0;i<2;i++)
+    {
+        printf("%s\n",s[i].name);
+        printf("%s\n",s[i].branch);
+        printf("%f\n",s[i].cpg);
+    }
+    
+     
+         printf(" count ofstudent=%d\n",count);
+}
